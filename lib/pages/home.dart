@@ -16,13 +16,13 @@ class HomePage extends StatelessWidget {
     // final int b = 16; //Can be changed if it is a list
     return Scaffold(
       appBar: AppBar(
-        title: Text("My First App"),
+        title: const Text("My First App"),
       ), //Gives the app the blue bar on top
       body: Center(
           child: Container(
         child: Text("Welcome to $days of flutter by $name"),
       )),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
