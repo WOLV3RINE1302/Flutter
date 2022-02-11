@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
       ),
       darkTheme: ThemeData(
-        brightness: Brightness.dark, //This will ovverride colors in Swatch
+        brightness: Brightness.dark, //This will override colors in Swatch
       ),
       initialRoute: "/", //Used to set initial route
       routes: {
@@ -30,5 +30,5 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// bringVegtables({required bool bag, int money = 100}) {} //{} - not compulsory 
+// bringVegetables({required bool bag, int money = 100}) {} //{} - not compulsory
 // // except when required it written
