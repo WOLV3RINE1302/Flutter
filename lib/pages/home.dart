@@ -22,7 +22,8 @@ class HomePage extends StatelessWidget {
           // ignore: avoid_unnecessary_containers
           child: Container(
         child: Text("Welcome to $days of flutter by $name"),
-      )),
+      )
+      ),
       drawer: const Drawer(),
     );
   }
