@@ -19,10 +19,10 @@ class HomePage extends StatelessWidget {
         title: const Text("My First App"),
       ), //Gives the app the blue bar on top
       body: Center(
-          // ignore: avoid_unnecessary_containers
+        // ignore: avoid_unnecessary_containers
           child: Container(
-        child: Text("Welcome to $days of flutter by $name"),
-      )
+            child: Text("Welcome to $days of flutter by $name"),
+          )
       ),
       drawer: const Drawer(),
     );

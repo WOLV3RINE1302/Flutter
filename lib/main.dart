@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalg/pages/home.dart';
 import 'package:flutter_catalg/pages/login.dart';
+import 'package:flutter_catalg/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -15,11 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: HomePage(), removed as we have home in routes(23)
+      // debugShowCheckedModeBanner: false , //To remove debug banner on top-right
       themeMode: ThemeMode.system,
       theme: ThemeData(
         fontFamily: GoogleFonts.lato().fontFamily,
         primarySwatch: Colors.grey,
-
       ),
       darkTheme: ThemeData(
         fontFamily: GoogleFonts.lato().fontFamily,
@@ -27,9 +28,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/", //Used to set initial route
       routes: {
-        "/": (context) =>
-            LoginPage(), //We are creating an object here but no need to use new
-        "/home": (context) => const HomePage(),
+        "/": (context) => LoginPage(), //We are creating an object here but no need to use new
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
