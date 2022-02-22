@@ -56,8 +56,9 @@ class _LoginPageState extends State<LoginPage> { //_ in LoginPageState denotes p
                     height: 40,
                   ),
                 InkWell(
-                  onTap: (){
-                    // Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  onTap: () async{
+                    await Future.delayed(const Duration(seconds : 1));
+                    Navigator.pushNamed(context, MyRoutes.homeRoute);
                     setState(() {
                       changeButton = true;
                     });
@@ -65,7 +66,7 @@ class _LoginPageState extends State<LoginPage> { //_ in LoginPageState denotes p
                   child: AnimatedContainer(
                     duration: const Duration(seconds: 1),
                     alignment: Alignment.center,
-                    child: const Text("Login",
+                    child:changeButton? const Icon(Icons.done): const Text("Login",
                       style: TextStyle(color: Colors.white,
                       fontWeight: FontWeight.w500,
                       fontSize: 19),
