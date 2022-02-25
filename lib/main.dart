@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: HomePage(), removed as we have home in routes(23)
-      // debugShowCheckedModeBanner: false , //To remove debug banner on top-right
+      debugShowCheckedModeBanner: false , //To remove debug banner on top-right
       themeMode: ThemeMode.system,
       theme: ThemeData(
         fontFamily: GoogleFonts.lato().fontFamily,
@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         brightness: Brightness.dark, //This will override colors in Swatch
       ),
-      initialRoute: "/", //Used to set initial route
+      initialRoute: MyRoutes.homeRoute, //Used to set initial route
       routes: {
-        "/": (context) => LoginPage(), //We are creating an object here but no need to use new
-        MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
+        "/": (context) => const LoginPage(), //We are creating an object here but no need to use new
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
       },
     );
   }
